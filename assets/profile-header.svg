@@ -5,7 +5,7 @@
   <rect x="36" y="36" width="8" height="228" rx="4" fill="#58a6ff"/>
   <rect x="62" y="36" width="3" height="228" rx="1.5" fill="#39d0d8" opacity="0.7"/>
   <text x="100" y="128" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="68" font-weight="700">Andrin Maag</text>
-  <text x="103" y="205" fill="#8b949e" font-family="Consolas, monospace" font-size="40">IMS STUDENT DEVELOPER</text>
+  <text x="103" y="205" fill="#8b949e" font-family="Consolas, monospace" font-size="50">IMS STUDENT DEVELOPER</text>
   <circle cx="1058" cy="112" r="72" fill="none" stroke="#30363d" stroke-width="2"/>
   <path d="M1018 112h80M1058 72v80" stroke="#39d0d8" stroke-width="8" stroke-linecap="round"/>
   <circle cx="1058" cy="112" r="12" fill="#58a6ff"/>
