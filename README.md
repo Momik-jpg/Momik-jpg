@@ -7,11 +7,20 @@
 <details name="profile-language">
 <summary><kbd>English</kbd></summary>
 
+<p align="center">
+  <a href="#hello-im-andrin"><kbd>About</kbd></a>
+  <a href="#projects"><kbd>Projects</kbd></a>
+  <a href="#skills--tools"><kbd>Skills</kbd></a>
+  <a href="#currently-learning"><kbd>Learning</kbd></a>
+</p>
+
 ## Hello, I'm Andrin
 
 I build practical software with clean interfaces and maintainable code. As an IMS student, I am deepening my skills in C#, Kotlin, and Android development while taking projects from the first concept to a usable release.
 
-## Featured Projects
+**IMS student** · Aargau, Switzerland · Open to IMS internships
+
+## Projects
 
 | Project | What it demonstrates | Stack |
 | --- | --- | --- |
@@ -22,12 +31,12 @@ I build practical software with clean interfaces and maintainable code. As an IM
 ## Skills & Tools
 
 <p>
-  <img src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&amp;logo=dotnet&amp;logoColor=white" alt="C#">
-  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&amp;logo=kotlin&amp;logoColor=white" alt="Kotlin">
-  <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&amp;logo=android&amp;logoColor=111111" alt="Android">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&amp;logo=git&amp;logoColor=white" alt="Git">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&amp;logo=github&amp;logoColor=white" alt="GitHub">
+  <img src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&amp;logo=dotnet&amp;logoColor=white" alt="C#">
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&amp;logo=kotlin&amp;logoColor=white" alt="Kotlin">
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&amp;logo=android&amp;logoColor=111111" alt="Android">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Git">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub">
 </p>
 
 <details>
@@ -56,11 +65,20 @@ I build practical software with clean interfaces and maintainable code. As an IM
 <details name="profile-language" open>
 <summary><kbd>Deutsch</kbd></summary>
 
+<p align="center">
+  <a href="#hallo-ich-bin-andrin"><kbd>Über mich</kbd></a>
+  <a href="#projekte"><kbd>Projekte</kbd></a>
+  <a href="#kenntnisse--tools"><kbd>Kenntnisse</kbd></a>
+  <a href="#aktuell-lerne-ich"><kbd>Lernen</kbd></a>
+</p>
+
 ## Hallo, ich bin Andrin
 
 Ich entwickle praktische Software mit klaren Benutzeroberflächen und lege Wert auf verständlichen, wartbaren Code. Als IMS-Schüler vertiefe ich meine Kenntnisse in C#, Kotlin und Android-Entwicklung und bringe Projekte vom ersten Konzept bis zu einer nutzbaren Version.
 
-## Ausgewählte Projekte
+**IMS-Schüler** · Aargau, Schweiz · Offen für IMS-Praktika
+
+## Projekte
 
 | Projekt | Was es zeigt | Technologien |
 | --- | --- | --- |
@@ -71,12 +89,12 @@ Ich entwickle praktische Software mit klaren Benutzeroberflächen und lege Wert 
 ## Kenntnisse & Tools
 
 <p>
-  <img src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&amp;logo=dotnet&amp;logoColor=white" alt="C#">
-  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&amp;logo=kotlin&amp;logoColor=white" alt="Kotlin">
-  <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&amp;logo=android&amp;logoColor=111111" alt="Android">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&amp;logo=git&amp;logoColor=white" alt="Git">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&amp;logo=github&amp;logoColor=white" alt="GitHub">
+  <img src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&amp;logo=dotnet&amp;logoColor=white" alt="C#">
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&amp;logo=kotlin&amp;logoColor=white" alt="Kotlin">
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&amp;logo=android&amp;logoColor=111111" alt="Android">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Git">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub">
 </p>
 
 <details>
