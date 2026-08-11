@@ -1,4 +1,4 @@
-![Andrin Maag - IMS Student Developer](assets/profile-header.svg)
+![Andrin Maag - IMS Student Developer](assets/profile-header-generated.png)
 
 ## Hallo, ich bin Andrin
 

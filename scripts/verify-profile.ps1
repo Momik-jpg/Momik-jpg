@@ -14,7 +14,7 @@ $requiredText = @(
     'Momik-jpg/TestColdown',
     'Momik-jpg/orbit-defender-monogame',
     'Momik-jpg/LB259',
-    'assets/profile-header.svg'
+    'assets/profile-header-generated.png'
 )
 
 $forbiddenPatterns = @(
