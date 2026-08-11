@@ -1,22 +1,23 @@
-![Andrin Maag - IMS Student Developer](assets/profile-header-generated.png)
+<p align="right">
+  <a href="./README.md"><img src="https://img.shields.io/badge/Sprache-Deutsch-0969DA?style=for-the-badge" alt="Deutsch"></a>
+  <a href="./README.en.md"><img src="https://img.shields.io/badge/Language-English-30363D?style=for-the-badge" alt="English"></a>
+</p>
+
+![Andrin Maag - IMS Student Developer](assets/profile-header-workspace-hq.png)
 
 ## Hallo, ich bin Andrin
 
-Ich entwickle praktische Software mit klaren Benutzeroberflächen und lege Wert auf verständlichen, wartbaren Code. Als IMS-Schüler vertiefe ich aktuell meine Kenntnisse in C#, Kotlin und Android-Entwicklung und bringe Projekte vom ersten Konzept bis zu einer nutzbaren Version.
+Ich entwickle praktische Software mit klaren Benutzeroberflächen und lege Wert auf verständlichen, wartbaren Code. Als IMS-Schüler vertiefe ich meine Kenntnisse in C#, Kotlin und Android-Entwicklung und bringe Projekte vom ersten Konzept bis zu einer nutzbaren Version.
 
-## Hello, I'm Andrin
+## Ausgewählte Projekte
 
-I build practical software with clean interfaces and maintainable code. My current focus is C#, Kotlin, Android development, and turning ideas into reliable, usable software.
-
-## Featured Projects
-
-| Project | What it demonstrates | Stack |
+| Projekt | Was es zeigt | Technologien |
 | --- | --- | --- |
-| [**Exam Countdown**](https://github.com/Momik-jpg/TestColdown) | Android app for exams, schedules, reminders, widgets, grade calculations, encrypted local settings, and iCal synchronisation. | Kotlin, Android |
-| [**Orbit Defender**](https://github.com/Momik-jpg/orbit-defender-monogame) | Real-time game with a structured game loop, collision services, increasing difficulty, and persistent JSON high scores. | C#, .NET 8, MonoGame |
-| [**CO2 Data Analysis**](https://github.com/Momik-jpg/LB259) | Exploration of public emissions data with documented data protection decisions, source attribution, and a cleaned dataset. | Python, Jupyter Notebook |
+| [**Exam Countdown**](https://github.com/Momik-jpg/TestColdown) | Android-App für Prüfungen, Termine, Erinnerungen, Widgets, Notenberechnungen, verschlüsselte lokale Einstellungen und iCal-Synchronisation. | Kotlin, Android |
+| [**Orbit Defender**](https://github.com/Momik-jpg/orbit-defender-monogame) | Echtzeitspiel mit strukturiertem Game Loop, Kollisionsdiensten, steigendem Schwierigkeitsgrad und persistenten JSON-Highscores. | C#, .NET 8, MonoGame |
+| [**CO2 Data Analysis**](https://github.com/Momik-jpg/LB259) | Analyse öffentlicher Emissionsdaten mit dokumentierten Datenschutzentscheiden, Quellenangaben und bereinigtem Datensatz. | Python, Jupyter Notebook |
 
-## Skills & Tools
+## Kenntnisse & Tools
 
 <p>
   <img src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&amp;logo=dotnet&amp;logoColor=white" alt="C#">
@@ -27,14 +28,23 @@ I build practical software with clean interfaces and maintainable code. My curre
   <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&amp;logo=github&amp;logoColor=white" alt="GitHub">
 </p>
 
-## Currently Learning
+<details>
+<summary><strong>Mehr über meine Arbeitsweise</strong></summary>
 
-- Building maintainable Android applications with Kotlin
-- Structuring larger C# projects with clear responsibilities
-- Improving testing, documentation, and release quality
+- Ich zerlege grössere Aufgaben in verständliche, überprüfbare Schritte.
+- Ich achte auf klare Zuständigkeiten, wartbaren Code und nachvollziehbare Dokumentation.
+- Ich teste Funktionen nicht nur technisch, sondern auch aus Sicht der Benutzerinnen und Benutzer.
+
+</details>
+
+## Aktuell lerne ich
+
+- Wartbare Android-Apps mit Kotlin entwickeln
+- Grössere C#-Projekte mit klaren Zuständigkeiten strukturieren
+- Tests, Dokumentation und Release-Qualität verbessern
 
 ---
 
 <p align="center">
-  Open to learning opportunities, IMS internships, and interesting software projects in Switzerland.
+  Offen für Lernmöglichkeiten, IMS-Praktika und interessante Softwareprojekte in der Schweiz.
 </p>

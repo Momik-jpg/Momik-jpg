@@ -3,18 +3,30 @@ $ErrorActionPreference = 'Stop'
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 $canonicalRepositoryRoot = [IO.Path]::GetFullPath($repositoryRoot)
 $repositoryBoundary = $canonicalRepositoryRoot.TrimEnd([IO.Path]::DirectorySeparatorChar) + [IO.Path]::DirectorySeparatorChar
-$readmePath = Join-Path $repositoryRoot 'README.md'
-$readme = Get-Content -Raw -LiteralPath $readmePath
+$profileFiles = @{
+    'README.md' = @(
+        'Ich entwickle praktische Software',
+        'README.en.md',
+        'assets/profile-header-workspace-hq.png'
+    )
+    'README.en.md' = @(
+        'I build practical software',
+        'README.md',
+        'assets/profile-header-workspace-hq.png'
+    )
+}
+
+$readme = ($profileFiles.Keys | ForEach-Object {
+    Get-Content -Raw -LiteralPath (Join-Path $repositoryRoot $_)
+}) -join "`n"
 
 $requiredText = @(
     'Andrin Maag',
     'IMS Student Developer',
-    'Ich entwickle praktische Software',
-    'I build practical software',
     'Momik-jpg/TestColdown',
     'Momik-jpg/orbit-defender-monogame',
     'Momik-jpg/LB259',
-    'assets/profile-header-generated.png'
+    'assets/profile-header-workspace-hq.png'
 )
 
 $forbiddenPatterns = @(
@@ -37,6 +49,15 @@ $profileText = [regex]::Replace(
     [System.Text.RegularExpressions.RegexOptions]::IgnoreCase -bor
         [System.Text.RegularExpressions.RegexOptions]::Singleline
 )
+
+foreach ($entry in $profileFiles.GetEnumerator()) {
+    $fileText = Get-Content -Raw -LiteralPath (Join-Path $repositoryRoot $entry.Key)
+    foreach ($text in $entry.Value) {
+        if (-not $fileText.Contains($text)) {
+            $failures.Add("Missing required text in $($entry.Key): $text")
+        }
+    }
+}
 
 foreach ($text in $requiredText) {
     if (-not $profileText.Contains($text)) {
