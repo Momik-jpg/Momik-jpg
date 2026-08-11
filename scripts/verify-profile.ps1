@@ -6,13 +6,12 @@ $repositoryBoundary = $canonicalRepositoryRoot.TrimEnd([IO.Path]::DirectorySepar
 $profileFiles = @{
     'README.md' = @(
         'Ich entwickle praktische Software',
-        'README.en.md',
-        'assets/profile-header-workspace-hq.png'
-    )
-    'README.en.md' = @(
         'I build practical software',
-        'README.md',
-        'assets/profile-header-workspace-hq.png'
+        'name="profile-language"',
+        '(prefers-color-scheme: dark)',
+        '(prefers-color-scheme: light)',
+        'assets/profile-header-workspace-hq.png',
+        'assets/profile-header-workspace-light.png'
     )
 }
 
@@ -126,7 +125,53 @@ foreach ($image in $htmlImages) {
         $failures.Add("Unsupported absolute local image path: $source. Use a repository-relative path.")
     }
     elseif (-not (Test-ExternalImageDestination $source)) {
-        $failures.Add("Unsupported local HTML image: $source. Use inline Markdown instead.")
+        try {
+            $assetPath = [IO.Path]::GetFullPath((Join-Path $canonicalRepositoryRoot $source))
+        }
+        catch {
+            $failures.Add("Invalid local HTML image path: $source")
+            continue
+        }
+
+        if (-not $assetPath.StartsWith($repositoryBoundary, [System.StringComparison]::OrdinalIgnoreCase)) {
+            $failures.Add("Local HTML image path escapes repository: $source")
+        }
+        elseif (-not (Test-Path -LiteralPath $assetPath -PathType Leaf)) {
+            $failures.Add("Missing local HTML image: $source")
+        }
+    }
+}
+
+$htmlSourcePattern = '<source\b[^>]*\bsrcset\s*=\s*(?:"(?<source>[^"]*)"|''(?<source>[^'']*)''|(?<source>[^\s>]+))[^>]*>'
+$htmlSources = [regex]::Matches(
+    $profileText,
+    $htmlSourcePattern,
+    [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
+)
+
+foreach ($imageSource in $htmlSources) {
+    $source = $imageSource.Groups['source'].Value.Trim()
+    if ([string]::IsNullOrWhiteSpace($source)) {
+        $failures.Add('Empty picture source destination.')
+    }
+    elseif ([IO.Path]::IsPathRooted($source) -and -not $source.StartsWith('//')) {
+        $failures.Add("Unsupported absolute picture source path: $source")
+    }
+    elseif (-not (Test-ExternalImageDestination $source)) {
+        try {
+            $assetPath = [IO.Path]::GetFullPath((Join-Path $canonicalRepositoryRoot $source))
+        }
+        catch {
+            $failures.Add("Invalid local picture source path: $source")
+            continue
+        }
+
+        if (-not $assetPath.StartsWith($repositoryBoundary, [System.StringComparison]::OrdinalIgnoreCase)) {
+            $failures.Add("Local picture source path escapes repository: $source")
+        }
+        elseif (-not (Test-Path -LiteralPath $assetPath -PathType Leaf)) {
+            $failures.Add("Missing local picture source: $source")
+        }
     }
 }
 
