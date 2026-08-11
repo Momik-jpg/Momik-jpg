@@ -5,7 +5,7 @@
 </picture>
 
 <details name="profile-language">
-<summary><strong>English version</strong></summary>
+<summary><kbd>English</kbd></summary>
 
 ## Hello, I'm Andrin
 
@@ -54,7 +54,7 @@ I build practical software with clean interfaces and maintainable code. As an IM
 </details>
 
 <details name="profile-language" open>
-<summary><strong>Deutsch</strong></summary>
+<summary><kbd>Deutsch</kbd></summary>
 
 ## Hallo, ich bin Andrin
 
