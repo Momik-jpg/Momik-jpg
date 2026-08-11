@@ -28,7 +28,15 @@ $forbiddenPatterns = @(
 
 $failures = [System.Collections.Generic.List[string]]::new()
 $fencedBlockPattern = '(?ms)^[ \t]*(?<fence>```|~~~)[^\r\n]*\r?\n.*?^[ \t]*\k<fence>[ \t]*\r?(?=\n|$)'
-$profileText = [regex]::Replace($readme, $fencedBlockPattern, '')
+$htmlCommentPattern = '<!--.*?(?:-->|$)'
+$unfencedText = [regex]::Replace($readme, $fencedBlockPattern, '')
+$profileText = [regex]::Replace(
+    $unfencedText,
+    $htmlCommentPattern,
+    '',
+    [System.Text.RegularExpressions.RegexOptions]::IgnoreCase -bor
+        [System.Text.RegularExpressions.RegexOptions]::Singleline
+)
 
 foreach ($text in $requiredText) {
     if (-not $profileText.Contains($text)) {
