@@ -96,9 +96,9 @@ if (-not [regex]::IsMatch($profileText, '<details\s+name="profile-language"\s+op
     $failures.Add('The German language group must be open by default.')
 }
 
-$technologyIcons = [regex]::Matches($profileText, 'assets/tech/(?:dotnet|csharp|kotlin|android|python|jupyter|git|github)\.svg')
-if ($technologyIcons.Count -ne 16) {
-    $failures.Add("Expected eight technology icons per language, found $($technologyIcons.Count) total.")
+$technologyIconSources = [regex]::Matches($profileText, 'assets/tech-stack-(?:dark|light)\.svg')
+if ($technologyIconSources.Count -ne 6) {
+    $failures.Add("Expected themed technology strips in both languages, found $($technologyIconSources.Count) references.")
 }
 
 $requiredAssets = @(
@@ -106,15 +106,9 @@ $requiredAssets = @(
     'assets/profile-header-workspace-light.png',
     'assets/profile-focus.gif',
     'assets/PHOTO-CREDIT.md',
-    'assets/tech/dotnet.svg',
-    'assets/tech/csharp.svg',
-    'assets/tech/kotlin.svg',
-    'assets/tech/android.svg',
-    'assets/tech/python.svg',
-    'assets/tech/jupyter.svg',
-    'assets/tech/git.svg',
-    'assets/tech/github.svg',
-    'assets/tech/README.md'
+    'assets/tech-stack-dark.svg',
+    'assets/tech-stack-light.svg',
+    'assets/TECH-ICON-CREDIT.md'
 )
 foreach ($asset in $requiredAssets) {
     $assetPath = Join-Path $repositoryRoot $asset

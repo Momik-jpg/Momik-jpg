@@ -52,9 +52,15 @@ A documented analysis of public emissions data, including data cleaning, source 
 
 ## Technology
 
-| [<img src="assets/tech/dotnet.svg" width="52" alt=".NET"><br><strong>.NET</strong>](https://dotnet.microsoft.com/) | [<img src="assets/tech/csharp.svg" width="52" alt="C#"><br><strong>C#</strong>](https://learn.microsoft.com/dotnet/csharp/) | [<img src="assets/tech/kotlin.svg" width="52" alt="Kotlin"><br><strong>Kotlin</strong>](https://kotlinlang.org/) | [<img src="assets/tech/android.svg" width="52" alt="Android"><br><strong>Android</strong>](https://developer.android.com/) |
-|:---:|:---:|:---:|:---:|
-| [<img src="assets/tech/python.svg" width="52" alt="Python"><br><strong>Python</strong>](https://www.python.org/) | [<img src="assets/tech/jupyter.svg" width="52" alt="Jupyter"><br><strong>Jupyter</strong>](https://jupyter.org/) | [<img src="assets/tech/git.svg" width="52" alt="Git"><br><strong>Git</strong>](https://git-scm.com/) | [<img src="assets/tech/github.svg" width="52" alt="GitHub"><br><strong>GitHub</strong>](https://github.com/) |
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/tech-stack-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/tech-stack-light.svg">
+    <img src="assets/tech-stack-light.svg" width="560" alt=".NET, C#, Kotlin, Android Studio, Python, Git, and GitHub">
+  </picture>
+  <br>
+  <sub><strong>.NET · C# · Kotlin · Android Studio · Python · Git · GitHub</strong></sub>
+</p>
 
 ## How I Work
 
@@ -124,9 +130,15 @@ Eine dokumentierte Analyse öffentlicher Emissionsdaten mit Datenbereinigung, Qu
 
 ## Technologien
 
-| [<img src="assets/tech/dotnet.svg" width="52" alt=".NET"><br><strong>.NET</strong>](https://dotnet.microsoft.com/) | [<img src="assets/tech/csharp.svg" width="52" alt="C#"><br><strong>C#</strong>](https://learn.microsoft.com/dotnet/csharp/) | [<img src="assets/tech/kotlin.svg" width="52" alt="Kotlin"><br><strong>Kotlin</strong>](https://kotlinlang.org/) | [<img src="assets/tech/android.svg" width="52" alt="Android"><br><strong>Android</strong>](https://developer.android.com/) |
-|:---:|:---:|:---:|:---:|
-| [<img src="assets/tech/python.svg" width="52" alt="Python"><br><strong>Python</strong>](https://www.python.org/) | [<img src="assets/tech/jupyter.svg" width="52" alt="Jupyter"><br><strong>Jupyter</strong>](https://jupyter.org/) | [<img src="assets/tech/git.svg" width="52" alt="Git"><br><strong>Git</strong>](https://git-scm.com/) | [<img src="assets/tech/github.svg" width="52" alt="GitHub"><br><strong>GitHub</strong>](https://github.com/) |
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/tech-stack-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/tech-stack-light.svg">
+    <img src="assets/tech-stack-light.svg" width="560" alt=".NET, C#, Kotlin, Android Studio, Python, Git und GitHub">
+  </picture>
+  <br>
+  <sub><strong>.NET · C# · Kotlin · Android Studio · Python · Git · GitHub</strong></sub>
+</p>
 
 ## Meine Arbeitsweise
 
