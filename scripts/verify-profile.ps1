@@ -213,6 +213,20 @@ foreach ($asset in $requiredAssets) {
     }
 }
 
+$supersededAssets = @(
+    'assets/profile-focus.gif',
+    'assets/tech-stack-dark.svg',
+    'assets/tech-stack-light.svg',
+    'assets/TECH-ICON-CREDIT.md',
+    'assets/profile-header-generated.png'
+)
+foreach ($asset in $supersededAssets) {
+    $assetPath = Join-Path $repositoryRoot $asset
+    if (Test-Path -LiteralPath $assetPath -PathType Leaf) {
+        $failures.Add("Superseded profile asset must be absent: $asset")
+    }
+}
+
 function Test-ExternalImageDestination {
     param([string] $Destination)
 
