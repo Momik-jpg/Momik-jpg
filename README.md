@@ -52,16 +52,9 @@ A documented analysis of public emissions data, including data cleaning, source 
 
 ## Technology
 
-<p>
-  <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&amp;logo=dotnet&amp;logoColor=white" alt=".NET">
-  <img src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&amp;logo=dotnet&amp;logoColor=white" alt="C#">
-  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&amp;logo=kotlin&amp;logoColor=white" alt="Kotlin">
-  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&amp;logo=android&amp;logoColor=111111" alt="Android">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&amp;logo=jupyter&amp;logoColor=white" alt="Jupyter">
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Git">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub">
-</p>
+| [<img src="assets/tech/dotnet.svg" width="52" alt=".NET"><br><strong>.NET</strong>](https://dotnet.microsoft.com/) | [<img src="assets/tech/csharp.svg" width="52" alt="C#"><br><strong>C#</strong>](https://learn.microsoft.com/dotnet/csharp/) | [<img src="assets/tech/kotlin.svg" width="52" alt="Kotlin"><br><strong>Kotlin</strong>](https://kotlinlang.org/) | [<img src="assets/tech/android.svg" width="52" alt="Android"><br><strong>Android</strong>](https://developer.android.com/) |
+|:---:|:---:|:---:|:---:|
+| [<img src="assets/tech/python.svg" width="52" alt="Python"><br><strong>Python</strong>](https://www.python.org/) | [<img src="assets/tech/jupyter.svg" width="52" alt="Jupyter"><br><strong>Jupyter</strong>](https://jupyter.org/) | [<img src="assets/tech/git.svg" width="52" alt="Git"><br><strong>Git</strong>](https://git-scm.com/) | [<img src="assets/tech/github.svg" width="52" alt="GitHub"><br><strong>GitHub</strong>](https://github.com/) |
 
 ## How I Work
 
@@ -131,16 +124,9 @@ Eine dokumentierte Analyse öffentlicher Emissionsdaten mit Datenbereinigung, Qu
 
 ## Technologien
 
-<p>
-  <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&amp;logo=dotnet&amp;logoColor=white" alt=".NET">
-  <img src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&amp;logo=dotnet&amp;logoColor=white" alt="C#">
-  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&amp;logo=kotlin&amp;logoColor=white" alt="Kotlin">
-  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&amp;logo=android&amp;logoColor=111111" alt="Android">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&amp;logo=jupyter&amp;logoColor=white" alt="Jupyter">
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Git">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub">
-</p>
+| [<img src="assets/tech/dotnet.svg" width="52" alt=".NET"><br><strong>.NET</strong>](https://dotnet.microsoft.com/) | [<img src="assets/tech/csharp.svg" width="52" alt="C#"><br><strong>C#</strong>](https://learn.microsoft.com/dotnet/csharp/) | [<img src="assets/tech/kotlin.svg" width="52" alt="Kotlin"><br><strong>Kotlin</strong>](https://kotlinlang.org/) | [<img src="assets/tech/android.svg" width="52" alt="Android"><br><strong>Android</strong>](https://developer.android.com/) |
+|:---:|:---:|:---:|:---:|
+| [<img src="assets/tech/python.svg" width="52" alt="Python"><br><strong>Python</strong>](https://www.python.org/) | [<img src="assets/tech/jupyter.svg" width="52" alt="Jupyter"><br><strong>Jupyter</strong>](https://jupyter.org/) | [<img src="assets/tech/git.svg" width="52" alt="Git"><br><strong>Git</strong>](https://git-scm.com/) | [<img src="assets/tech/github.svg" width="52" alt="GitHub"><br><strong>GitHub</strong>](https://github.com/) |
 
 ## Meine Arbeitsweise
 

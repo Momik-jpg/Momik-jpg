@@ -45,7 +45,8 @@ $forbiddenPatterns = @(
     'commit quest',
     'readme-typing-svg',
     'github-profile-views',
-    'github-snake'
+    'github-snake',
+    'img\.shields\.io'
 )
 
 $failures = [System.Collections.Generic.List[string]]::new()
@@ -95,16 +96,25 @@ if (-not [regex]::IsMatch($profileText, '<details\s+name="profile-language"\s+op
     $failures.Add('The German language group must be open by default.')
 }
 
-$technologyBadges = [regex]::Matches($profileText, 'style=for-the-badge')
-if ($technologyBadges.Count -ne 16) {
-    $failures.Add("Expected eight technology badges per language, found $($technologyBadges.Count) total.")
+$technologyIcons = [regex]::Matches($profileText, 'assets/tech/(?:dotnet|csharp|kotlin|android|python|jupyter|git|github)\.svg')
+if ($technologyIcons.Count -ne 16) {
+    $failures.Add("Expected eight technology icons per language, found $($technologyIcons.Count) total.")
 }
 
 $requiredAssets = @(
     'assets/profile-header-workspace-hq.png',
     'assets/profile-header-workspace-light.png',
     'assets/profile-focus.gif',
-    'assets/PHOTO-CREDIT.md'
+    'assets/PHOTO-CREDIT.md',
+    'assets/tech/dotnet.svg',
+    'assets/tech/csharp.svg',
+    'assets/tech/kotlin.svg',
+    'assets/tech/android.svg',
+    'assets/tech/python.svg',
+    'assets/tech/jupyter.svg',
+    'assets/tech/git.svg',
+    'assets/tech/github.svg',
+    'assets/tech/README.md'
 )
 foreach ($asset in $requiredAssets) {
     $assetPath = Join-Path $repositoryRoot $asset
