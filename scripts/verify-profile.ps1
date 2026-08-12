@@ -1,5 +1,33 @@
 $ErrorActionPreference = 'Stop'
 
+$utf8Encoding = New-Object System.Text.UTF8Encoding($false)
+[Console]::OutputEncoding = $utf8Encoding
+$middleDot = [char]0x00B7
+$aUmlaut = [char]0x00E4
+$uUmlaut = [char]0x00FC
+
+function Read-Utf8File {
+    param([string] $Path)
+
+    return [IO.File]::ReadAllText($Path, $utf8Encoding)
+}
+
+$fencedBlockPattern = '(?ms)^[ \t]*(?<fence>```|~~~)[^\r\n]*\r?\n.*?^[ \t]*\k<fence>[ \t]*\r?(?=\n|$)'
+$htmlCommentPattern = '<!--.*?(?:-->|$)'
+
+function Remove-HiddenProfileContent {
+    param([string] $Text)
+
+    $unfencedText = [regex]::Replace($Text, $fencedBlockPattern, '')
+    return [regex]::Replace(
+        $unfencedText,
+        $htmlCommentPattern,
+        '',
+        [System.Text.RegularExpressions.RegexOptions]::IgnoreCase -bor
+            [System.Text.RegularExpressions.RegexOptions]::Singleline
+    )
+}
+
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 $canonicalRepositoryRoot = [IO.Path]::GetFullPath($repositoryRoot)
 $repositoryBoundary = $canonicalRepositoryRoot.TrimEnd([IO.Path]::DirectorySeparatorChar) + [IO.Path]::DirectorySeparatorChar
@@ -14,9 +42,9 @@ $profileFiles = @{
         'assets/profile-header-workspace-light.png',
         '<strong>Deutsch</strong>',
         '<strong>English</strong>',
-        '01 · Exam Countdown',
-        '02 · Orbit Defender',
-        '03 · CO2 Data Analysis',
+        "01 $middleDot Exam Countdown",
+        "02 $middleDot Orbit Defender",
+        "03 $middleDot CO2 Data Analysis",
         'Core',
         'Im Einsatz',
         'Workflow',
@@ -24,9 +52,12 @@ $profileFiles = @{
     )
 }
 
-$readme = ($profileFiles.Keys | ForEach-Object {
-    Get-Content -Raw -LiteralPath (Join-Path $repositoryRoot $_)
-}) -join "`n"
+$visibleProfileFiles = @{}
+foreach ($profileFile in $profileFiles.Keys) {
+    $profileFilePath = Join-Path $repositoryRoot $profileFile
+    $visibleProfileFiles[$profileFile] = Remove-HiddenProfileContent (Read-Utf8File $profileFilePath)
+}
+$profileText = ($visibleProfileFiles.Values) -join "`n"
 
 $requiredText = @(
     'Andrin Maag',
@@ -34,11 +65,11 @@ $requiredText = @(
     'Momik-jpg/TestColdown',
     'Momik-jpg/orbit-defender-monogame',
     'Momik-jpg/LB259',
-    '## Ausgewählte Arbeiten',
+    "## Ausgew${aUmlaut}hlte Arbeiten",
     '## Selected Work',
     '## Meine Arbeitsweise',
     '## How I Work',
-    'Offen für IMS-Praktika',
+    "Offen f${uUmlaut}r IMS-Praktika",
     'Open to IMS internships'
 )
 
@@ -61,19 +92,9 @@ $forbiddenPatterns = @(
 )
 
 $failures = [System.Collections.Generic.List[string]]::new()
-$fencedBlockPattern = '(?ms)^[ \t]*(?<fence>```|~~~)[^\r\n]*\r?\n.*?^[ \t]*\k<fence>[ \t]*\r?(?=\n|$)'
-$htmlCommentPattern = '<!--.*?(?:-->|$)'
-$unfencedText = [regex]::Replace($readme, $fencedBlockPattern, '')
-$profileText = [regex]::Replace(
-    $unfencedText,
-    $htmlCommentPattern,
-    '',
-    [System.Text.RegularExpressions.RegexOptions]::IgnoreCase -bor
-        [System.Text.RegularExpressions.RegexOptions]::Singleline
-)
 
 foreach ($entry in $profileFiles.GetEnumerator()) {
-    $fileText = Get-Content -Raw -LiteralPath (Join-Path $repositoryRoot $entry.Key)
+    $fileText = $visibleProfileFiles[$entry.Key]
     foreach ($text in $entry.Value) {
         if (-not $fileText.Contains($text)) {
             $failures.Add("Missing required text in $($entry.Key): $text")
@@ -112,10 +133,43 @@ $projectUrls = @(
     'https://github.com/Momik-jpg/orbit-defender-monogame',
     'https://github.com/Momik-jpg/LB259'
 )
+$languageSectionPattern = '<details\s+name="profile-language"(?:\s+open)?>(?<content>.*?)</details\s*>'
+$languageSections = [regex]::Matches(
+    $profileText,
+    $languageSectionPattern,
+    [System.Text.RegularExpressions.RegexOptions]::IgnoreCase -bor
+        [System.Text.RegularExpressions.RegexOptions]::Singleline
+)
+if ($languageSections.Count -ne 2) {
+    $failures.Add("Expected exactly two complete named language sections, found $($languageSections.Count).")
+}
+
 foreach ($projectUrl in $projectUrls) {
-    $projectLinkCount = ([regex]::Matches($profileText, [regex]::Escape($projectUrl))).Count
-    if ($projectLinkCount -ne 2) {
-        $failures.Add("Expected project URL exactly twice, found $projectLinkCount references: $projectUrl")
+    $totalProjectLinkCount = ([regex]::Matches($profileText, [regex]::Escape($projectUrl))).Count
+    if ($totalProjectLinkCount -ne 2) {
+        $failures.Add("Expected project URL exactly twice overall, found $totalProjectLinkCount references: $projectUrl")
+    }
+}
+
+for ($sectionIndex = 0; $sectionIndex -lt $languageSections.Count; $sectionIndex++) {
+    $languageSection = $languageSections[$sectionIndex].Value
+    $languageNameMatch = [regex]::Match(
+        $languageSection,
+        '<summary>\s*<strong>(?<name>[^<]+)</strong>',
+        [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
+    )
+    if ($languageNameMatch.Success) {
+        $languageName = $languageNameMatch.Groups['name'].Value
+    }
+    else {
+        $languageName = "language section $($sectionIndex + 1)"
+    }
+
+    foreach ($projectUrl in $projectUrls) {
+        $projectLinkCount = ([regex]::Matches($languageSection, [regex]::Escape($projectUrl))).Count
+        if ($projectLinkCount -ne 1) {
+            $failures.Add("Expected project URL exactly once in $languageName, found $projectLinkCount references: $projectUrl")
+        }
     }
 }
 
