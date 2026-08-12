@@ -5,16 +5,22 @@ $canonicalRepositoryRoot = [IO.Path]::GetFullPath($repositoryRoot)
 $repositoryBoundary = $canonicalRepositoryRoot.TrimEnd([IO.Path]::DirectorySeparatorChar) + [IO.Path]::DirectorySeparatorChar
 $profileFiles = @{
     'README.md' = @(
-        'Ich bin IMS-Schüler aus dem Aargau',
-        'I am an IMS student from Aargau',
+        'Ich entwickle Software, die im Alltag funktioniert.',
+        'I build software that works in everyday life.',
         'name="profile-language"',
         '(prefers-color-scheme: dark)',
         '(prefers-color-scheme: light)',
         'assets/profile-header-workspace-hq.png',
         'assets/profile-header-workspace-light.png',
-        'assets/profile-focus.gif',
-        'View profile in English',
-        'Profil auf Deutsch anzeigen'
+        '<strong>Deutsch</strong>',
+        '<strong>English</strong>',
+        '01 · Exam Countdown',
+        '02 · Orbit Defender',
+        '03 · CO2 Data Analysis',
+        'Core',
+        'Im Einsatz',
+        'Workflow',
+        'In daily use'
     )
 }
 
@@ -28,12 +34,12 @@ $requiredText = @(
     'Momik-jpg/TestColdown',
     'Momik-jpg/orbit-defender-monogame',
     'Momik-jpg/LB259',
-    'assets/profile-header-workspace-hq.png',
-    'assets/profile-focus.gif',
-    '## Selected Projects',
-    '## Ausgewählte Projekte',
+    '## Ausgewählte Arbeiten',
+    '## Selected Work',
+    '## Meine Arbeitsweise',
     '## How I Work',
-    '## Meine Arbeitsweise'
+    'Offen für IMS-Praktika',
+    'Open to IMS internships'
 )
 
 $forbiddenPatterns = @(
@@ -46,7 +52,12 @@ $forbiddenPatterns = @(
     'readme-typing-svg',
     'github-profile-views',
     'github-snake',
-    'img\.shields\.io'
+    'img\.shields\.io',
+    'profile-focus\.gif',
+    'tech-stack-(?:dark|light)\.svg',
+    'TECH-ICON-CREDIT',
+    '<marquee\b',
+    '<script\b'
 )
 
 $failures = [System.Collections.Generic.List[string]]::new()
@@ -96,19 +107,22 @@ if (-not [regex]::IsMatch($profileText, '<details\s+name="profile-language"\s+op
     $failures.Add('The German language group must be open by default.')
 }
 
-$technologyIconSources = [regex]::Matches($profileText, 'assets/tech-stack-(?:dark|light)\.svg')
-if ($technologyIconSources.Count -ne 6) {
-    $failures.Add("Expected themed technology strips in both languages, found $($technologyIconSources.Count) references.")
+$projectUrls = @(
+    'https://github.com/Momik-jpg/TestColdown',
+    'https://github.com/Momik-jpg/orbit-defender-monogame',
+    'https://github.com/Momik-jpg/LB259'
+)
+foreach ($projectUrl in $projectUrls) {
+    $projectLinkCount = ([regex]::Matches($profileText, [regex]::Escape($projectUrl))).Count
+    if ($projectLinkCount -ne 2) {
+        $failures.Add("Expected project URL exactly twice, found $projectLinkCount references: $projectUrl")
+    }
 }
 
 $requiredAssets = @(
     'assets/profile-header-workspace-hq.png',
     'assets/profile-header-workspace-light.png',
-    'assets/profile-focus.gif',
-    'assets/PHOTO-CREDIT.md',
-    'assets/tech-stack-dark.svg',
-    'assets/tech-stack-light.svg',
-    'assets/TECH-ICON-CREDIT.md'
+    'assets/PHOTO-CREDIT.md'
 )
 foreach ($asset in $requiredAssets) {
     $assetPath = Join-Path $repositoryRoot $asset
