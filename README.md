@@ -1,13 +1,9 @@
 <picture>
+  <source media="(max-width: 600px)" srcset="assets/profile-header-mobile.png">
   <source media="(prefers-color-scheme: dark)" srcset="assets/profile-header-workspace-hq.png">
   <source media="(prefers-color-scheme: light)" srcset="assets/profile-header-workspace-light.png">
   <img alt="Andrin Maag - IMS Student Developer focused on C#, Kotlin, Android, and Python" src="assets/profile-header-workspace-light.png">
 </picture>
-
-<p align="center">
-  <strong>Andrin Maag</strong><br>
-  <sub>IMS Student Developer · C# · Kotlin · Android · Python</sub>
-</p>
 
 <details name="profile-language">
 <summary><strong>English</strong> · Read in English</summary>

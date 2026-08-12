@@ -38,6 +38,8 @@ $profileFiles = @{
         'name="profile-language"',
         '(prefers-color-scheme: dark)',
         '(prefers-color-scheme: light)',
+        '<source media="(max-width: 600px)" srcset="assets/profile-header-mobile.png">',
+        'assets/profile-header-mobile.png',
         'assets/profile-header-workspace-hq.png',
         'assets/profile-header-workspace-light.png',
         '<strong>Deutsch</strong>',
@@ -59,7 +61,6 @@ $profileFiles = @{
         '**Im Einsatz:**',
         '**Workflow:**',
         '`Lokale Speicherung`',
-        "IMS Student Developer $middleDot C# $middleDot Kotlin $middleDot Android $middleDot Python",
         'alt="Andrin Maag - IMS Student Developer focused on C#, Kotlin, Android, and Python"'
     )
 }
@@ -127,6 +128,16 @@ foreach ($pattern in $forbiddenPatterns) {
     }
 }
 
+$profileHeaderPattern = '<picture>\s*<source media="\(max-width: 600px\)" srcset="assets/profile-header-mobile\.png">\s*<source media="\(prefers-color-scheme: dark\)" srcset="assets/profile-header-workspace-hq\.png">\s*<source media="\(prefers-color-scheme: light\)" srcset="assets/profile-header-workspace-light\.png">\s*<img\b[^>]*>\s*</picture>'
+if (-not [regex]::IsMatch($profileText, $profileHeaderPattern, [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)) {
+    $failures.Add('The profile picture sources must be ordered mobile, dark, then light.')
+}
+
+$duplicateIdentityCaptionPattern = '</picture>\s*<p\s+align="center">\s*<strong>Andrin Maag</strong>'
+if ([regex]::IsMatch($profileText, $duplicateIdentityCaptionPattern, [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)) {
+    $failures.Add('The profile header identity must not be duplicated in an adjacent visible caption.')
+}
+
 $languageGroups = [regex]::Matches($profileText, '<details\s+name="profile-language"(?:\s+open)?>', 'IgnoreCase')
 if ($languageGroups.Count -ne 2) {
     $failures.Add("Expected exactly two named language groups, found $($languageGroups.Count).")
@@ -187,6 +198,7 @@ for ($sectionIndex = 0; $sectionIndex -lt $languageSections.Count; $sectionIndex
 }
 
 $requiredAssets = @(
+    'assets/profile-header-mobile.png',
     'assets/profile-header-workspace-hq.png',
     'assets/profile-header-workspace-light.png',
     'assets/PHOTO-CREDIT.md'
