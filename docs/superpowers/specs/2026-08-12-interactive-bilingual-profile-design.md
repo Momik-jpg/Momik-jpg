@@ -17,6 +17,17 @@ The language control will combine the visual clarity of the compared B design wi
 
 GitHub does not provide true client-side tabs in README files. The visual treatment therefore suggests tabs while preserving the honest native disclosure interaction.
 
+## Professional Header
+
+The existing generated workspace image will be replaced with the selected real Coding Studio photograph from Pexels. The photograph will be downloaded into the repository so the profile does not depend on a hotlinked image.
+
+- Source: Pexels photo 34804001 by Daniil Komov.
+- Composition: the coding workspace remains visible while a restrained dark overlay creates a calm text area on the left.
+- Text: `Andrin Maag`, `IMS Student · Software Developer`, and `C# · Kotlin · Android · Python`.
+- Typography is rendered locally during asset generation rather than produced by an image model, ensuring sharp and correctly spelled text.
+- Separate light and dark variants use the same photograph and information with adjusted contrast.
+- The final assets remain within GitHub's recommended image dimensions and are optimised for sharp rendering without excessive file size.
+
 ## Content Structure
 
 Each language section will contain the same information hierarchy:
@@ -40,13 +51,16 @@ The profile will use only effects that GitHub supports reliably:
 - Native expanding and collapsing sections through `<details>`.
 - In-page anchor navigation for a website-like reading flow.
 - Consistent technology badges with recognisable official symbols.
-- One optional animated typing line hosted as an external SVG only if it loads reliably in both themes during verification.
+- One restrained, locally stored animated SVG line below the header. It cycles through a maximum of two short statements and provides a static readable fallback inside the SVG.
 
-Animated contribution snakes, visitor counters, autoplay media, excessive badges, and misleading live statistics are excluded. They would distract from the recruiter-focused presentation or introduce unnecessary third-party reliability risks.
+The animation will be informative rather than decorative. It will communicate Andrin's focus on practical software and his primary technologies. It must remain legible in both themes and avoid rapid, continuous movement.
+
+Animated contribution snakes, visitor counters, autoplay media, excessive badges, externally hosted typing services, and misleading live statistics are excluded. They would distract from the recruiter-focused presentation or introduce unnecessary third-party reliability risks.
 
 ## Light And Dark Themes
 
 - Existing theme-specific header assets remain the visual foundation.
+- The selected real photograph replaces the current generated scene in both header variants.
 - Technology symbols must have sufficient contrast in both GitHub themes.
 - Any dynamic SVG must use a transparent background and readable accent colour, or be removed if it cannot adapt cleanly.
 - No text will be embedded in a theme-dependent image unless both image variants contain the same information.
@@ -74,4 +88,4 @@ The change is complete only after:
 
 ## Scope
 
-This iteration changes the profile README and, only if required, its verification script. It does not create GitHub Pages, add a separate website, rewrite repository histories, or modify the selected projects.
+This iteration changes the profile README, replaces its two header assets, adds one local animated SVG, records the photo attribution, and updates the verification script. It does not create GitHub Pages, add a separate website, rewrite repository histories, or modify the selected projects.
