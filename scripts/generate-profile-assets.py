@@ -68,40 +68,6 @@ def draw_header(source: Image.Image, output: Path, dark: bool) -> None:
     base.convert("RGB").save(output, "PNG", optimize=True)
 
 
-def draw_focus_animation(output: Path) -> None:
-    width, height = 1600, 96
-    background = (13, 17, 23)
-    font = ImageFont.truetype(str(FONT_REGULAR), 34)
-    messages = (
-        "Building clear, practical software.",
-        "C#  ·  Kotlin  ·  Android  ·  Python",
-    )
-    frames: list[Image.Image] = []
-    durations: list[int] = []
-    for message in messages:
-        for opacity in (255, 220, 180, 140, 100, 60, 100, 140, 180, 220, 255):
-            frame = Image.new("RGB", (width, height), background)
-            draw = ImageDraw.Draw(frame)
-            box = draw.textbbox((0, 0), message, font=font)
-            text_width = box[2] - box[0]
-            x = (width - text_width) // 2
-            colour = tuple(int(background[i] + (target - background[i]) * opacity / 255) for i, target in enumerate((184, 213, 255)))
-            draw.text((x, 25), message, font=font, fill=colour)
-            frames.append(frame)
-            durations.append(85)
-        durations[0 if len(frames) == 11 else len(frames) - 11] = 1800
-        durations[-1] = 1800
-    frames[0].save(
-        output,
-        save_all=True,
-        append_images=frames[1:],
-        duration=durations,
-        loop=0,
-        optimize=True,
-        disposal=2,
-    )
-
-
 def main() -> None:
     if len(sys.argv) != 3:
         raise SystemExit("Usage: generate-profile-assets.py SOURCE_IMAGE OUTPUT_DIRECTORY")
@@ -111,7 +77,6 @@ def main() -> None:
     source = Image.open(source_path)
     draw_header(source, output_dir / "profile-header-workspace-light.png", dark=False)
     draw_header(source, output_dir / "profile-header-workspace-hq.png", dark=True)
-    draw_focus_animation(output_dir / "profile-focus.gif")
 
 
 if __name__ == "__main__":
