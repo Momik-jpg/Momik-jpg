@@ -42,13 +42,25 @@ $profileFiles = @{
         'assets/profile-header-workspace-light.png',
         '<strong>Deutsch</strong>',
         '<strong>English</strong>',
-        "01 $middleDot Exam Countdown",
-        "02 $middleDot Orbit Defender",
-        "03 $middleDot CO2 Data Analysis",
-        'Core',
-        'Im Einsatz',
-        'Workflow',
-        'In daily use'
+        "01 $middleDot Exam Countdown](https://github.com/Momik-jpg/TestColdown) $middleDot EN",
+        "02 $middleDot Orbit Defender](https://github.com/Momik-jpg/orbit-defender-monogame) $middleDot EN",
+        "03 $middleDot CO2 Data Analysis](https://github.com/Momik-jpg/LB259) $middleDot EN",
+        "01 $middleDot Exam Countdown](https://github.com/Momik-jpg/TestColdown) $middleDot DE",
+        "02 $middleDot Orbit Defender](https://github.com/Momik-jpg/orbit-defender-monogame) $middleDot DE",
+        "03 $middleDot CO2 Data Analysis](https://github.com/Momik-jpg/LB259) $middleDot DE",
+        '**Focus:**',
+        '**Approach:**',
+        '**Status:**',
+        '**Fokus:**',
+        '**Arbeitsweise:**',
+        '**Core:**',
+        '**In daily use:**',
+        '**Kerntechnologien:**',
+        '**Im Einsatz:**',
+        '**Workflow:**',
+        '`Lokale Speicherung`',
+        "IMS Student Developer $middleDot C# $middleDot Kotlin $middleDot Android $middleDot Python",
+        'alt="Andrin Maag - IMS Student Developer focused on C#, Kotlin, Android, and Python"'
     )
 }
 
@@ -87,6 +99,7 @@ $forbiddenPatterns = @(
     'profile-focus\.gif',
     'tech-stack-(?:dark|light)\.svg',
     'TECH-ICON-CREDIT',
+    '(?m)^\s*\|\s*:?-{3,}',
     '<marquee\b',
     '<script\b'
 )
