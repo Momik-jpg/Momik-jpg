@@ -5,13 +5,16 @@ $canonicalRepositoryRoot = [IO.Path]::GetFullPath($repositoryRoot)
 $repositoryBoundary = $canonicalRepositoryRoot.TrimEnd([IO.Path]::DirectorySeparatorChar) + [IO.Path]::DirectorySeparatorChar
 $profileFiles = @{
     'README.md' = @(
-        'Ich entwickle praktische Software',
-        'I build practical software',
+        'Ich bin IMS-Schüler aus dem Aargau',
+        'I am an IMS student from Aargau',
         'name="profile-language"',
         '(prefers-color-scheme: dark)',
         '(prefers-color-scheme: light)',
         'assets/profile-header-workspace-hq.png',
-        'assets/profile-header-workspace-light.png'
+        'assets/profile-header-workspace-light.png',
+        'assets/profile-focus.gif',
+        'View profile in English',
+        'Profil auf Deutsch anzeigen'
     )
 }
 
@@ -25,7 +28,12 @@ $requiredText = @(
     'Momik-jpg/TestColdown',
     'Momik-jpg/orbit-defender-monogame',
     'Momik-jpg/LB259',
-    'assets/profile-header-workspace-hq.png'
+    'assets/profile-header-workspace-hq.png',
+    'assets/profile-focus.gif',
+    '## Selected Projects',
+    '## Ausgewählte Projekte',
+    '## How I Work',
+    '## Meine Arbeitsweise'
 )
 
 $forbiddenPatterns = @(
@@ -34,7 +42,10 @@ $forbiddenPatterns = @(
     'currently working on \.\.\.',
     'github-readme-stats',
     'visitor badge',
-    'commit quest'
+    'commit quest',
+    'readme-typing-svg',
+    'github-profile-views',
+    'github-snake'
 )
 
 $failures = [System.Collections.Generic.List[string]]::new()
@@ -67,6 +78,41 @@ foreach ($text in $requiredText) {
 foreach ($pattern in $forbiddenPatterns) {
     if ([regex]::IsMatch($profileText, $pattern, [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)) {
         $failures.Add("Forbidden profile content matched: $pattern")
+    }
+}
+
+$languageGroups = [regex]::Matches($profileText, '<details\s+name="profile-language"(?:\s+open)?>', 'IgnoreCase')
+if ($languageGroups.Count -ne 2) {
+    $failures.Add("Expected exactly two named language groups, found $($languageGroups.Count).")
+}
+
+$openLanguageGroups = [regex]::Matches($profileText, '<details\s+name="profile-language"\s+open>', 'IgnoreCase')
+if ($openLanguageGroups.Count -ne 1) {
+    $failures.Add("Expected exactly one language group open by default, found $($openLanguageGroups.Count).")
+}
+
+if (-not [regex]::IsMatch($profileText, '<details\s+name="profile-language"\s+open>\s*<summary><strong>Deutsch</strong>', 'IgnoreCase')) {
+    $failures.Add('The German language group must be open by default.')
+}
+
+$technologyBadges = [regex]::Matches($profileText, 'style=for-the-badge')
+if ($technologyBadges.Count -ne 16) {
+    $failures.Add("Expected eight technology badges per language, found $($technologyBadges.Count) total.")
+}
+
+$requiredAssets = @(
+    'assets/profile-header-workspace-hq.png',
+    'assets/profile-header-workspace-light.png',
+    'assets/profile-focus.gif',
+    'assets/PHOTO-CREDIT.md'
+)
+foreach ($asset in $requiredAssets) {
+    $assetPath = Join-Path $repositoryRoot $asset
+    if (-not (Test-Path -LiteralPath $assetPath -PathType Leaf)) {
+        $failures.Add("Missing required profile asset: $asset")
+    }
+    elseif ((Get-Item -LiteralPath $assetPath).Length -eq 0) {
+        $failures.Add("Profile asset is empty: $asset")
     }
 }
 
