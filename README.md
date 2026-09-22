@@ -14,7 +14,7 @@ I create clear interfaces, maintainable code, and carefully verified solutions. 
 
 - **Focus:** Android and C#
 - **Approach:** Structured and user-focused
-- **Status:** Open to IMS internships in Switzerland
+- **Status:** Seeking an IMS software development internship starting August 2027 in Switzerland
 
 ## Selected Work
 
@@ -59,7 +59,7 @@ A documented analysis of public CO2 data covering data cleaning, privacy decisio
 ---
 
 <p align="center">
-  Open to IMS internships and learning opportunities in Switzerland.<br>
+  Seeking an IMS software development internship in Switzerland starting August 2027.<br>
   <a href="https://github.com/Momik-jpg?tab=repositories"><strong>Explore all repositories →</strong></a>
 </p>
 
@@ -74,7 +74,7 @@ Ich entwickle klare Benutzeroberflächen, wartbaren Code und sorgfältig überpr
 
 - **Fokus:** Android und C#
 - **Arbeitsweise:** Strukturiert und benutzerorientiert
-- **Status:** Offen für IMS-Praktika in der Schweiz
+- **Status:** Suche ein IMS-Praktikum in der Softwareentwicklung ab August 2027 in der Schweiz
 
 ## Ausgewählte Arbeiten
 
@@ -119,7 +119,7 @@ Eine dokumentierte Analyse öffentlicher CO2-Daten mit Datenbereinigung, Datensc
 ---
 
 <p align="center">
-  Offen für IMS-Praktika und Lernmöglichkeiten in der Schweiz.<br>
+  Suche ab August 2027 ein IMS-Praktikum in der Softwareentwicklung in der Schweiz.<br>
   <a href="https://github.com/Momik-jpg?tab=repositories"><strong>Alle Repositories ansehen →</strong></a>
 </p>
 
