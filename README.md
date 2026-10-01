@@ -13,9 +13,20 @@ Ich bin IMS-Schüler aus dem Aargau. Ich entwickle Android-Apps, Windows-Werkzeu
 
 **Mein Fokus:** Kotlin und Android · C# und .NET · Python für Datenanalyse
 
-[Projekte ansehen](#ausgewählte-projekte) · [Alle Repositories](https://github.com/Momik-jpg?tab=repositories) · [Kontakt über GitHub](https://github.com/Momik-jpg)
+[Projekte ansehen](#projekte) · [Alle Repositories](https://github.com/Momik-jpg?tab=repositories) · [Kontakt über GitHub](https://github.com/Momik-jpg)
+
+<a name="projekte"></a>
 
 ## Ausgewählte Projekte ✨
+
+| Lust auf … | Projekt | Einstieg |
+| --- | --- | --- |
+| 📚 Schulalltag organisieren | Prüfungs-Countdown · Android | [Downloads](https://github.com/Momik-jpg/TestColdown/releases) |
+| 🧰 Lokale Konten verwalten | Codex Simple Accounts · Windows | [Downloads](https://github.com/Momik-jpg/Codex-Simple-Accounts/releases) |
+| 🛰️ Ein kleines Arcade-Spiel | Orbit Defender · .NET | [Lokal starten](https://github.com/Momik-jpg/orbit-defender-monogame#start) |
+| 🌍 Daten und Modelle erkunden | CO₂-Datenanalyse · Python | [Notebooks & Anleitung](https://github.com/Momik-jpg/LB259#readme) |
+
+<sub>Von der kleinen Idee bis zum überprüfbaren Ergebnis 🌱</sub>
 
 ### 📚 [Prüfungs-Countdown](https://github.com/Momik-jpg/TestColdown)
 **Schulalltag organisieren · Kotlin / Android**
