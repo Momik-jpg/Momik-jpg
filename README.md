@@ -2,125 +2,93 @@
   <source media="(max-width: 600px)" srcset="assets/profile-header-mobile.png">
   <source media="(prefers-color-scheme: dark)" srcset="assets/profile-header-workspace-hq.png">
   <source media="(prefers-color-scheme: light)" srcset="assets/profile-header-workspace-light.png">
-  <img alt="Andrin Maag - IMS Student Developer focused on C#, Kotlin, Android, and Python" src="assets/profile-header-workspace-light.png">
+  <img alt="Andrin Maag – IMS-Schüler mit Fokus auf C#, Kotlin, Android und Python" src="assets/profile-header-workspace-light.png">
 </picture>
 
-<details name="profile-language">
-<summary><strong>English</strong> · Read in English</summary>
+# Hallo, ich bin Andrin.
 
-## I build software that works in everyday life.
+Ich bin IMS-Schüler aus dem Aargau. Ich entwickle Android-Apps, Windows-Werkzeuge und Spiele – besonders gerne Software, die ein konkretes Problem im Alltag löst.
 
-I create clear interfaces, maintainable code, and carefully verified solutions. I am an IMS student from Aargau with a current focus on Android, C#, Kotlin, and practical software development.
+**Ich suche ein IMS-Praktikum in der Applikationsentwicklung ab August 2027 in der Schweiz.**
 
-- **Focus:** Android and C#
-- **Approach:** Structured and user-focused
-- **Status:** Seeking an IMS software development internship starting August 2027 in Switzerland
+**Mein Fokus:** Kotlin und Android · C# und .NET · Python für Datenanalyse
 
-## Selected Work
+[Projekte ansehen](#ausgewählte-projekte) · [Alle Repositories](https://github.com/Momik-jpg?tab=repositories) · [Kontakt über GitHub](https://github.com/Momik-jpg)
 
-### [01 · Exam Countdown](https://github.com/Momik-jpg/TestColdown) · EN
+## Ausgewählte Projekte
 
-An Android exam planner that brings schedules, reminders, widgets, grade tools, exports, and iCal synchronisation into one focused workflow. The project uses privacy-focused local storage and handles time-based behaviour carefully.
+### [Prüfungs-Countdown](https://github.com/Momik-jpg/TestColdown)
+**Schulalltag organisieren · Kotlin / Android**
 
-`Kotlin` `Android` `Widgets` `iCal` `Local storage`
+Eine Android-App für Prüfungen, Stundenplan und Erinnerungen. Dazu kommen Widgets, Notenberechnung und iCal-Synchronisation.
 
-### [02 · Orbit Defender](https://github.com/Momik-jpg/orbit-defender-monogame) · EN
+**Technischer Schwerpunkt:** zeitabhängige Abläufe, Delta-Sync und lokal verschlüsselte iCal-Links.
 
-A MonoGame arcade project with a structured game loop, service-based responsibilities, collision handling, increasing difficulty, and persistent JSON high scores.
+[Code & Einrichtung](https://github.com/Momik-jpg/TestColdown#readme) · [Android-Downloads](https://github.com/Momik-jpg/TestColdown/releases)
 
-`C#` `.NET 8` `MonoGame` `JSON` `Game architecture`
+### [Codex Simple Accounts](https://github.com/Momik-jpg/Codex-Simple-Accounts)
+**Lokale Windows-Werkzeuge · C# / .NET**
 
-### [03 · CO2 Data Analysis](https://github.com/Momik-jpg/LB259) · EN
+Eine unabhängige Windows-App zum Verwalten und Wechseln lokaler Codex-Konten, mit Tray-Menü und Aufgabenrouter für die Modell- und Denkstufenwahl.
 
-A documented analysis of public CO2 data covering data cleaning, privacy decisions, source attribution, regression visualisation, and model predictions.
+**Technischer Schwerpunkt:** DPAPI-Verschlüsselung, atomarer Austausch der Anmeldung und ein abbrechbarer Wechselablauf.
 
-`Python` `Jupyter Notebook` `Open data` `Regression`
+[Code & Einrichtung](https://github.com/Momik-jpg/Codex-Simple-Accounts#readme) · [Windows-Downloads](https://github.com/Momik-jpg/Codex-Simple-Accounts/releases)
 
-## Technology
+### [Orbit Defender](https://github.com/Momik-jpg/orbit-defender-monogame)
+**Interaktive Spielmechanik · C# / MonoGame**
 
-- **Core:** C# · Kotlin · Android
-- **In daily use:** .NET · Python · Jupyter
-- **Workflow:** Git · GitHub
+Ein Arcade-Spiel mit Gegnern, Kollisionen, steigender Schwierigkeit und persistenten Highscores.
 
-## How I Work
+**Mein Beitrag:** Spielmechanik, Game Loop, Service-Struktur, Kollisionslogik und Highscore-Verwaltung.
 
-- **Understand:** clarify the problem, constraints, and expected user experience.
-- **Structure:** divide larger features into focused responsibilities and verifiable steps.
-- **Build:** prefer readable code and platform conventions over unnecessary complexity.
-- **Verify:** test behaviour, edge cases, accessibility, and the user experience.
-- **Document:** keep decisions and setup understandable for the next person.
+[Code, Steuerung & lokaler Start](https://github.com/Momik-jpg/orbit-defender-monogame#readme)
 
-## Currently Learning
+### [CO₂-Datenanalyse](https://github.com/Momik-jpg/LB259)
+**Modelle kritisch auswerten · Python / scikit-learn / Jupyter**
 
-- Maintainable Android development with Kotlin
-- Clear architecture in larger C# and .NET projects
-- Automated tests, accessibility, documentation, and release quality
+Ein Schulprojekt mit öffentlichen Daten von Our World in Data. Ich vergleiche lineare Regression und Entscheidungsbäume und prüfe die Modelle auf getrennten Ländergruppen.
 
----
+**Mein Beitrag:** Datenbereinigung, explorative Analyse, Modellvergleich und strengere Ländergruppen-Validierung.
 
-<p align="center">
-  Seeking an IMS software development internship in Switzerland starting August 2027.<br>
-  <a href="https://github.com/Momik-jpg?tab=repositories"><strong>Explore all repositories →</strong></a>
-</p>
+**Grenze:** Das Demo-Sample mit 1'000 Zeilen ist nicht repräsentativ; die Ergebnisse sind keine belastbare globale Emissionsprognose.
 
-</details>
+[Notebooks, Ergebnisse & Reproduktion](https://github.com/Momik-jpg/LB259#readme)
 
-<details name="profile-language" open>
-<summary><strong>Deutsch</strong> · Auf Deutsch lesen</summary>
+## Wie ich arbeite
 
-## Ich entwickle Software, die im Alltag funktioniert.
+- **Verstehen:** Was brauchen die Nutzer, und welche Einschränkungen gibt es?
+- **Umsetzen:** Funktionen in überschaubare Komponenten aufteilen.
+- **Prüfen:** Randfälle, Fehlerbehandlung und Bedienung kontrollieren.
+- **Dokumentieren:** Einrichtung, Entscheidungen und bekannte Grenzen erklären.
 
-Ich entwickle klare Benutzeroberflächen, wartbaren Code und sorgfältig überprüfte Lösungen. Als IMS-Schüler aus dem Aargau liegt mein aktueller Fokus auf Android, C#, Kotlin und praktischer Softwareentwicklung.
-
-- **Fokus:** Android und C#
-- **Arbeitsweise:** Strukturiert und benutzerorientiert
-- **Status:** Suche ein IMS-Praktikum in der Softwareentwicklung ab August 2027 in der Schweiz
-
-## Ausgewählte Arbeiten
-
-### [01 · Exam Countdown](https://github.com/Momik-jpg/TestColdown) · DE
-
-Ein Android-Prüfungsplaner, der Stundenplan, Erinnerungen, Widgets, Notenwerkzeuge, Exporte und iCal-Synchronisation in einem fokussierten Ablauf verbindet. Das Projekt verwendet datenschutzorientierte lokale Speicherung und behandelt zeitabhängiges Verhalten sorgfältig.
-
-`Kotlin` `Android` `Widgets` `iCal` `Lokale Speicherung`
-
-### [02 · Orbit Defender](https://github.com/Momik-jpg/orbit-defender-monogame) · DE
-
-Ein MonoGame-Arcadeprojekt mit strukturiertem Game Loop, klar getrennten Diensten, Kollisionsbehandlung, steigendem Schwierigkeitsgrad und persistenten JSON-Highscores.
-
-`C#` `.NET 8` `MonoGame` `JSON` `Spielarchitektur`
-
-### [03 · CO2 Data Analysis](https://github.com/Momik-jpg/LB259) · DE
-
-Eine dokumentierte Analyse öffentlicher CO2-Daten mit Datenbereinigung, Datenschutzentscheiden, Quellenangaben, Regressionsvisualisierung und Modellprognosen.
-
-`Python` `Jupyter Notebook` `Open Data` `Regression`
-
-## Technologien
-
-- **Kerntechnologien:** C# · Kotlin · Android
-- **Im Einsatz:** .NET · Python · Jupyter
-- **Workflow:** Git · GitHub
-
-## Meine Arbeitsweise
-
-- **Verstehen:** Problem, Einschränkungen und erwartetes Benutzererlebnis klären.
-- **Strukturieren:** grössere Funktionen in klare Zuständigkeiten und überprüfbare Schritte aufteilen.
-- **Umsetzen:** lesbaren Code und Plattformkonventionen unnötiger Komplexität vorziehen.
-- **Überprüfen:** Verhalten, Randfälle, Barrierefreiheit und Bedienung testen.
-- **Dokumentieren:** Entscheidungen und Einrichtung für die nächste Person verständlich halten.
-
-## Aktuell lerne ich
-
-- Wartbare Android-Entwicklung mit Kotlin
-- Klare Architektur in grösseren C#- und .NET-Projekten
-- Automatisierte Tests, Barrierefreiheit, Dokumentation und Release-Qualität
+Aktuell vertiefe ich automatisierte Tests, wartbare Architektur und die Qualität von Releases.
 
 ---
 
-<p align="center">
-  Suche ab August 2027 ein IMS-Praktikum in der Softwareentwicklung in der Schweiz.<br>
-  <a href="https://github.com/Momik-jpg?tab=repositories"><strong>Alle Repositories ansehen →</strong></a>
-</p>
+<details>
+<summary><strong>English · About me and my projects</strong></summary>
+
+## Hi, I'm Andrin.
+
+I'm an IMS student from Aargau, Switzerland. I build Android apps, Windows utilities and games, with a focus on software that solves practical problems.
+
+**I'm looking for an IMS application development internship in Switzerland starting August 2027.**
+
+**Focus:** Kotlin and Android · C# and .NET · Python for data analysis
+
+### Selected projects
+
+- **[Exam Countdown](https://github.com/Momik-jpg/TestColdown):** an Android app for exams, schedules, reminders, widgets and iCal synchronisation. Technical focus: time-based behaviour, delta sync and encrypted local calendar URLs. [Android downloads](https://github.com/Momik-jpg/TestColdown/releases).
+- **[Codex Simple Accounts](https://github.com/Momik-jpg/Codex-Simple-Accounts):** an independent Windows utility for managing local Codex accounts, with a tray menu and task routing for model and reasoning effort selection. Technical focus: DPAPI encryption, atomic authentication replacement and a cancellable switching flow. [Windows downloads](https://github.com/Momik-jpg/Codex-Simple-Accounts/releases).
+- **[Orbit Defender](https://github.com/Momik-jpg/orbit-defender-monogame):** a C# / MonoGame arcade game. My contribution includes gameplay, the game loop, service structure, collisions and persistent high scores.
+- **[CO₂ Data Analysis](https://github.com/Momik-jpg/LB259):** a Python school project using Our World in Data. My contribution includes data cleaning, exploratory analysis, model comparison and validation on separate country groups. The 1,000-row demo sample is not representative and does not support reliable global emissions forecasts.
+
+### How I work
+
+Understand the user's problem, build manageable components, check edge cases and document setup and limitations.
+
+I'm currently improving automated testing, maintainable architecture and release quality.
 
 </details>
+
