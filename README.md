@@ -5,7 +5,7 @@
   <img alt="Andrin Maag – IMS-Schüler mit Fokus auf C#, Kotlin, Android und Python" src="assets/profile-header-workspace-light.png">
 </picture>
 
-# Hallo, ich bin Andrin.
+# Hallo, ich bin Andrin. 🌱
 
 Ich bin IMS-Schüler aus dem Aargau. Ich entwickle Android-Apps, Windows-Werkzeuge und Spiele – besonders gerne Software, die ein konkretes Problem im Alltag löst.
 
@@ -15,9 +15,9 @@ Ich bin IMS-Schüler aus dem Aargau. Ich entwickle Android-Apps, Windows-Werkzeu
 
 [Projekte ansehen](#ausgewählte-projekte) · [Alle Repositories](https://github.com/Momik-jpg?tab=repositories) · [Kontakt über GitHub](https://github.com/Momik-jpg)
 
-## Ausgewählte Projekte
+## Ausgewählte Projekte ✨
 
-### [Prüfungs-Countdown](https://github.com/Momik-jpg/TestColdown)
+### 📚 [Prüfungs-Countdown](https://github.com/Momik-jpg/TestColdown)
 **Schulalltag organisieren · Kotlin / Android**
 
 Eine Android-App für Prüfungen, Stundenplan und Erinnerungen. Dazu kommen Widgets, Notenberechnung und iCal-Synchronisation.
@@ -26,7 +26,7 @@ Eine Android-App für Prüfungen, Stundenplan und Erinnerungen. Dazu kommen Widg
 
 [Code & Einrichtung](https://github.com/Momik-jpg/TestColdown#readme) · [Android-Downloads](https://github.com/Momik-jpg/TestColdown/releases)
 
-### [Codex Simple Accounts](https://github.com/Momik-jpg/Codex-Simple-Accounts)
+### 🧰 [Codex Simple Accounts](https://github.com/Momik-jpg/Codex-Simple-Accounts)
 **Lokale Windows-Werkzeuge · C# / .NET**
 
 Eine unabhängige Windows-App zum Verwalten und Wechseln lokaler Codex-Konten, mit Tray-Menü und Aufgabenrouter für die Modell- und Denkstufenwahl.
@@ -35,7 +35,7 @@ Eine unabhängige Windows-App zum Verwalten und Wechseln lokaler Codex-Konten, m
 
 [Code & Einrichtung](https://github.com/Momik-jpg/Codex-Simple-Accounts#readme) · [Windows-Downloads](https://github.com/Momik-jpg/Codex-Simple-Accounts/releases)
 
-### [Orbit Defender](https://github.com/Momik-jpg/orbit-defender-monogame)
+### 🛰️ [Orbit Defender](https://github.com/Momik-jpg/orbit-defender-monogame)
 **Interaktive Spielmechanik · C# / MonoGame**
 
 Ein Arcade-Spiel mit Gegnern, Kollisionen, steigender Schwierigkeit und persistenten Highscores.
@@ -44,7 +44,7 @@ Ein Arcade-Spiel mit Gegnern, Kollisionen, steigender Schwierigkeit und persiste
 
 [Code, Steuerung & lokaler Start](https://github.com/Momik-jpg/orbit-defender-monogame#readme)
 
-### [CO₂-Datenanalyse](https://github.com/Momik-jpg/LB259)
+### 🌍 [CO₂-Datenanalyse](https://github.com/Momik-jpg/LB259)
 **Modelle kritisch auswerten · Python / scikit-learn / Jupyter**
 
 Ein Schulprojekt mit öffentlichen Daten von Our World in Data. Ich vergleiche lineare Regression und Entscheidungsbäume und prüfe die Modelle auf getrennten Ländergruppen.
