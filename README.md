@@ -66,6 +66,15 @@ Ein Schulprojekt mit öffentlichen Daten von Our World in Data. Ich vergleiche l
 
 [Notebooks, Ergebnisse & Reproduktion](https://github.com/Momik-jpg/LB259#readme)
 
+## Gemeinsam besser bauen 🌿
+
+Ich arbeite auch an bestehenden Open-Source-Projekten mit:
+
+- **[DevView · Kotlin-Beitrag](https://github.com/worldline/devview/pull/136):** vorgeschlagene Begrenzung einer internen Hilfsklasse und Anpassung der öffentlichen API. Der PR ist noch offen.
+- **[DevView · Code Review](https://github.com/worldline/devview/pull/131#pullrequestreview-5375530285):** konkreter Hinweis auf ungültige Referenzpfade, mit Beispiel und Vorschlag für einen Regressionstest.
+
+Kleine Beiträge zählen für mich, wenn sie das Projekt verständlicher, zuverlässiger oder leichter wartbar machen.
+
 ## Wie ich arbeite
 
 - **Verstehen:** Was brauchen die Nutzer, und welche Einschränkungen gibt es?
@@ -95,6 +104,11 @@ I'm an IMS student from Aargau, Switzerland. I build Android apps, Windows utili
 - **[Orbit Defender](https://github.com/Momik-jpg/orbit-defender-monogame):** a C# / MonoGame arcade game. My contribution includes gameplay, the game loop, service structure, collisions and persistent high scores.
 - **[CO₂ Data Analysis](https://github.com/Momik-jpg/LB259):** a Python school project using Our World in Data. My contribution includes data cleaning, exploratory analysis, model comparison and validation on separate country groups. The 1,000-row demo sample is not representative and does not support reliable global emissions forecasts.
 
+### Open-source participation
+
+- **[DevView Kotlin contribution](https://github.com/worldline/devview/pull/136):** proposed restricting a helper class to internal visibility and updating the public API surface. The PR is still open.
+- **[DevView code review](https://github.com/worldline/devview/pull/131#pullrequestreview-5375530285):** identified an invalid reference-path case and suggested a regression test.
+
 ### How I work
 
 Understand the user's problem, build manageable components, check edge cases and document setup and limitations.
@@ -102,4 +116,5 @@ Understand the user's problem, build manageable components, check edge cases and
 I'm currently improving automated testing, maintainable architecture and release quality.
 
 </details>
+
 
