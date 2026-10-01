@@ -13,7 +13,7 @@ Ich bin IMS-Schüler aus dem Aargau. Ich entwickle Android-Apps, Windows-Werkzeu
 
 **Mein Fokus:** Kotlin und Android · C# und .NET · Python für Datenanalyse
 
-[Projekte ansehen](#projekte) · [Alle Repositories](https://github.com/Momik-jpg?tab=repositories) · [Kontakt über GitHub](https://github.com/Momik-jpg)
+[Projekte ansehen](#user-content-projekte) · [Alle Repositories](https://github.com/Momik-jpg?tab=repositories) · [Kontakt über GitHub](https://github.com/Momik-jpg)
 
 <a name="projekte"></a>
 
