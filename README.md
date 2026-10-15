@@ -116,5 +116,3 @@ Understand the user's problem, build manageable components, check edge cases and
 I'm currently improving automated testing, maintainable architecture and release quality.
 
 </details>
-
-
